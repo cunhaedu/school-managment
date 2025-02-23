@@ -1,6 +1,6 @@
 package com.cunhaedu.student_database.controller;
 
-import com.cunhaedu.student_database.model.School;
+import com.cunhaedu.student_database.domain.School;
 import com.cunhaedu.student_database.service.SchoolService;
 import org.springframework.web.bind.annotation.*;
 

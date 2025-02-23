@@ -1,6 +1,6 @@
 package com.cunhaedu.student_database.service;
 
-import com.cunhaedu.student_database.model.School;
+import com.cunhaedu.student_database.domain.School;
 import com.cunhaedu.student_database.repository.SchoolRepository;
 import org.springframework.stereotype.Service;
 

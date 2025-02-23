@@ -1,7 +1,7 @@
 package com.cunhaedu.student_database.repository;
 
-import com.cunhaedu.student_database.model.FederativeUnit;
-import com.cunhaedu.student_database.model.School;
+import com.cunhaedu.student_database.domain.FederativeUnit;
+import com.cunhaedu.student_database.domain.School;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 

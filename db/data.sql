@@ -6,83 +6,20 @@ IF NOT EXISTS (select 1 from gender where name = 'Masculino')
 IF NOT EXISTS (select 1 from gender where name = 'Feminino')
     INSERT INTO gender (name) VALUES ('Feminino')
 
--- INSERT FEDERATIVE UNIT DATA
+-- Inserindo dados na tabela person
+INSERT INTO person (name, cpf, photo_url, birthdate, gender_id, address, uf, city, personal_email, cell_phone)
+VALUES 
+('Carlos Silva', '123.456.789-01', NULL, '1990-05-15', 1, 'Rua das Flores, 123', 'SP', 'São Paulo', 'carlos.silva@email.com', '(11) 98765-4321'),
+('Ana Souza', '987.654.321-00', NULL, '1985-10-22', 2, 'Av. Brasil, 456', 'RJ', 'Rio de Janeiro', 'ana.souza@email.com', '(21) 91234-5678'),
+('João Pereira', '321.654.987-22', NULL, '1993-07-08', 1, 'Rua Central, 789', 'MG', 'Belo Horizonte', 'joao.pereira@email.com', '(31) 99876-5432'),
+('Mariana Lima', '159.753.468-33', NULL, '1998-12-30', 2, 'Av. Paulista, 1010', 'SP', 'São Paulo', 'mariana.lima@email.com', '(11) 94567-8901'),
+('Rafael Costa', '753.159.846-44', NULL, '1980-03-25', 1, 'Rua da Praia, 55', 'BA', 'Salvador', 'rafael.costa@email.com', '(71) 98765-4321');
 
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'AC')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Acre', 'AC')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'AL')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Alagoas', 'AL')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'AM')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Amazonas', 'AM')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'BA')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Bahia', 'BA')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'CE')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Ceará', 'CE')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'DF')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Distrito Federal', 'DF')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'ES')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Espírito Santo', 'ES')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'GO')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Goiás', 'GO')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'MA')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Maranhão', 'MA')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'MT')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Mato Grosso', 'MT')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'MS')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Mato Grosso do Sul', 'MS')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'MG')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Minas Gerais', 'MG')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'PA')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Pará', 'PA')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'PB')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Paraíba', 'PB')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'PR')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Paraná', 'PR')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'PE')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Pernambuco', 'PE')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'PI')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Piauí', 'PI')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'RJ')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Rio de Janeiro', 'RJ')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'RN')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Rio Grande do Norte', 'RN')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'RS')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Rio Grande do Sul', 'RS')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'RO')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Rondônia', 'RO')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'RR')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Roraima', 'RR')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'SC')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Santa Catarina', 'SC')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'SP')
-    INSERT INTO federative_unit (name, acronym) VALUES ('São Paulo', 'SP')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'SE')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Sergipe', 'SE')
-GO
-IF NOT EXISTS (select 1 from federative_unit where acronym = 'TO')
-    INSERT INTO federative_unit (name, acronym) VALUES ('Tocantins', 'TO')
-GO
+-- Inserindo dados na tabela users
+INSERT INTO users (person_id, email, password)
+VALUES 
+(1, 'carlos.silva@email.com', 'Senha123'),
+(2, 'ana.souza@email.com', 'Senha456'),
+(3, 'joao.pereira@email.com', 'Senha789'),
+(4, 'mariana.lima@email.com', 'SenhaABC'),
+(5, 'rafael.costa@email.com', 'SenhaXYZ');

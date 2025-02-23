@@ -1,6 +1,6 @@
 package com.cunhaedu.student_database.controller;
 
-import com.cunhaedu.student_database.model.FederativeUnit;
+import com.cunhaedu.student_database.domain.FederativeUnit;
 import com.cunhaedu.student_database.service.FederativeUnitService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
